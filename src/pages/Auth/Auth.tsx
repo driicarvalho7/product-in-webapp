@@ -39,7 +39,7 @@ const Auth = () => {
 
       if (res?.token) {
         Cookies.set("auth_token", res.token, { expires: 7 });
-        navigate("/");
+        navigate("/campaign-selection");
       }
     }
   };
