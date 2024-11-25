@@ -5,6 +5,9 @@ import PrivateRoute from "./PrivateRoute";
 import Auth from "../pages/Auth/Auth";
 import CampaignSelection from "../pages/Campaigns/CampaignSelection";
 import CampaignCreate from "../pages/Campaigns/CampaignCreate";
+import ProductCreateEdit from "../pages/Product/ProductCreateEdit";
+import ProductScan from "../pages/Product/ProductScan";
+import ProductList from "../pages/Product/ProductList";
 
 function AppRoutes() {
   return (
@@ -19,6 +22,18 @@ function AppRoutes() {
         <Route
           path="/campaign-create"
           element={<PrivateRoute component={CampaignCreate} />}
+        />
+        <Route
+          path="/product-list"
+          element={<PrivateRoute component={ProductList} />}
+        />
+        <Route
+          path="/product-create-edit"
+          element={<PrivateRoute component={ProductCreateEdit} />}
+        />
+        <Route
+          path="/product-scan"
+          element={<PrivateRoute component={ProductScan} />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -1,14 +1,10 @@
 // src/components/CampaignDropdown.tsx
+import { Campaign } from "../utils/interfaces/campaign";
 import { useState, useEffect, useRef } from "react";
 import useApi from "../hooks/useApi";
 
-interface Campaign {
-  id: string;
-  name: string;
-}
-
 interface CampaignDropdownProps {
-  onSelect: (campaignId: string) => void;
+  onSelect: (campaign: Campaign) => void;
 }
 
 const CampaignDropdown: React.FC<CampaignDropdownProps> = ({ onSelect }) => {
@@ -73,7 +69,7 @@ const CampaignDropdown: React.FC<CampaignDropdownProps> = ({ onSelect }) => {
             <li
               key={campaign.id}
               onClick={() => {
-                onSelect(campaign.id);
+                onSelect(campaign);
                 setIsOpen(false); // Fecha o dropdown ao selecionar uma campanha
               }}
               className="px-4 py-2 cursor-pointer hover:bg-indigo-100"

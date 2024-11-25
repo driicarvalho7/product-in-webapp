@@ -1,12 +1,13 @@
 // src/pages/CampaignSelection.tsx
 import { useNavigate } from "react-router-dom";
 import CampaignDropdown from "../../components/CampaignDropdown";
+import { Campaign } from "../../utils/interfaces/campaign";
 
 const CampaignSelection = () => {
   const navigate = useNavigate();
 
-  const handleCampaignSelect = (campaignId: string) => {
-    navigate("/", { state: { campaignId } });
+  const handleCampaignSelect = (campaign: Campaign) => {
+    navigate("/", { state: { campaign } });
   };
 
   const handleCreateCampaign = () => {
