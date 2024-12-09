@@ -54,8 +54,16 @@ const Auth = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Coluna Esquerda - Background decorativo */}
-      <div className="w-0 md:w-1/2 bg-gray-200 flex items-center justify-center">
+      <div className="w-0 md:w-1/2 bg-gray-200 flex flex-col items-center justify-center">
         {/* Formas de fundo ou conteúdo adicional, se necessário */}
+        <p className="text-4xl mb-6">Copywriting @ 2024</p>
+        <p className="mb-4">Adriano Carvalho - 13692400</p>
+        <p className="mb-4">Beatriz Vieira - 13692362</p>
+        <p className="mb-4">Gabriel Carvalho - 13696662</p>
+        <p className="mb-4">Gabriel Andreghetti - 13692355</p>
+        <p className="mb-4">Matheus Araujo - 10871936</p>
+        <p className="mb-4">João Pedro - 13828592</p>
+        <p className="mb-4">Rafaela Lovatti - 13731066</p>
       </div>
 
       {/* Coluna Direita - Formulário */}
